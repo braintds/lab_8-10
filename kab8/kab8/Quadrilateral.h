@@ -14,4 +14,6 @@ public:
 	Quadrilateral(vector <Straight> _a, Color _col);
 	void change_col();
 	void print();
+	float get_perimeter();
+	float get_area();
 };

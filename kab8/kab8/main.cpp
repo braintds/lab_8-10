@@ -1,9 +1,4 @@
-#include "Header.h"
-#include "Point.h"
-#include "Color.h"
-#include "Circle.h"
-#include "Quadrilateral.h"
-
+#include "main.h"
 
 
 bool is_color(Color color) 
@@ -16,7 +11,7 @@ bool is_color(Color color)
 
 int main()
 {
-	SetConsoleCP(1251); //вывод и ввод в консоль на кириллице 
+	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	Point a(1, 2), b(3, 4), c(1, -3),d(-2,4);
 	Color s(235, 1, 1, 1);
@@ -33,5 +28,5 @@ int main()
 	quad.print();
 	quad.change_col();
 	quad.print();
-	
+	return 0;
 }

@@ -40,6 +40,13 @@ bool Straight::find_point(Straight _a)
 {
 	if ((a.x == _a.a.x) || (a.y == _a.a.y) || (b.x == _a.b.x) || (a.y == _a.b.y))
 		return true;
+	return false;
+}
+
+float Straight::get_length() {
+	
+	float length = sqrt(pow(b.get_x() - a.get_x(), 2.0) + pow(b.get_y() - a.get_y(), 2.0));
+	return length;
 }
 
 

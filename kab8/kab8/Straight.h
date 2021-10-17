@@ -15,6 +15,7 @@ public:
 	void set_coordin();
 	void set_coordin(double _x, double _y);
 	bool find_point(Straight _a);
-	
+	float get_length();
+
 	void print();
 };

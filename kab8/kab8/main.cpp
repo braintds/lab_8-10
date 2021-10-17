@@ -1,14 +1,6 @@
 #include "main.h"
 
 
-bool is_color(Color color) 
-{
-	if (color.is_color())
-		return true;
-	return false;
-}
-
-
 int main()
 {
 	SetConsoleCP(1251);
@@ -19,8 +11,8 @@ int main()
 	Ñircumference cir(c, s, 4);
 	Circle circle(cir, s);
 
-	Straight aa(a, b, s), ab(b,c,s), ac(c,d,s),ad(d,a,s);
-	vector <Straight> t{ aa,ab,ac,ad };
+	LineSegment aa(a, b, s), ab(b,c,s), ac(c,d,s),ad(d,a,s);
+	vector <LineSegment> t{ aa,ab,ac,ad };
 	Quadrilateral quad(t, s);
 	cout << "------------------------" << endl;
 	circle.print();

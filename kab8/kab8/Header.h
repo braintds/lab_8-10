@@ -1,12 +1,10 @@
 #pragma once
+#define _USE_MATH_DEFINES
 #include <iostream>
-#include <cmath>
+#include <math.h>
 #include <string>
 #include <windows.h>
 #include <vector>
 
 
 using namespace std;
-
-//поиск по координатам, запоминание новых, измена при находке 
-const double PI = 3.141592653589793;

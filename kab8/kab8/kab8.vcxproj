@@ -145,7 +145,7 @@
     <ClInclude Include="main.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Quadrilateral.h" />
-    <ClInclude Include="Straight.h" />
+    <ClInclude Include="LineSegment.h" />
     <ClInclude Include="Сircumference.h" />
   </ItemGroup>
   <ItemGroup>
@@ -154,7 +154,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Quadrilateral.cpp" />
-    <ClCompile Include="Straight.cpp" />
+    <ClCompile Include="LineSegment.cpp" />
     <ClCompile Include="Сircumference.cpp" />
   </ItemGroup>
   <ItemGroup>

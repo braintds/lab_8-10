@@ -1,7 +1,7 @@
 #include "Quadrilateral.h"
 
 
-Quadrilateral::Quadrilateral(vector <Straight> _a, Color _col)
+Quadrilateral::Quadrilateral(vector <LineSegment> _a, Color _col)
 	:a{ _a }
 {
 	a.reserve(4);

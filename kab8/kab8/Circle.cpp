@@ -1,8 +1,8 @@
 #include"Circle.h"
 
 
-Circle::Circle(Ñircumference _circle, Color _col)
-	:circle{ _circle }, color{ _col }
+Circle::Circle(Ñircumference circle, Color color)
+	:circle{ circle }, color{ color }
 {
 }
 
@@ -14,13 +14,13 @@ void Circle::set_color()
 
 double Circle::get_x()
 {
-	return this->circle.get_x();
+	return circle.get_x();
 }
 
 
 double Circle::get_y()
 {
-	return this->circle.get_y();
+	return circle.get_y();
 }
 
 
@@ -32,13 +32,13 @@ double Circle::get_rad()
 
 double Circle::get_square()
 {
-	return PI * pow(this->circle.get_rad(), 2);
+	return M_PI * pow(this->circle.get_rad(), 2);
 }
 
 
 double Circle::get_perimeter()
 {
-	return 2 * PI * this->circle.get_rad();
+	return 2 * M_PI * this->circle.get_rad();
 }
 
 

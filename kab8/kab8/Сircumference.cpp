@@ -1,43 +1,43 @@
-#include "Ñircumference.h"
+#include "Circumference.h"
 
 
-Ñircumference::Ñircumference(Point _centre, Color _col, double _rad)
+Circumference::Circumference(Point _centre, Color _col, double _rad)
 	: centre{ _centre }, color{ _col }, rad{ _rad }
 {
 }
 
 
-double Ñircumference::get_x()
+double Circumference::get_x()
 {
 	return this->centre.x;
 }
 
 
-double  Ñircumference::get_y()
+double  Circumference::get_y()
 {
 	return this->centre.y;
 }
 
 
-double Ñircumference::get_rad()
+double Circumference::get_rad()
 {
 	return this->rad;
 }
 
-void Ñircumference::set_color()
+void Circumference::set_color()
 {
 	color.change_param();
 }
 
-Color Ñircumference::get_color()
+Color Circumference::get_color()
 {
 	return color;
 }
 
 
-void Ñircumference::print()
+void Circumference::print()
 {
-	cout << "öåíòð x = " << this->centre.x << ",y = " << this->centre.y << ", Ðàäèóñ = " << rad << endl;
+	cout << "centre x = " << this->centre.x << ",y = " << this->centre.y << ", rad = " << rad << endl;
 	color.print();
 
 }

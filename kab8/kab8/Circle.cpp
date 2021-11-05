@@ -1,7 +1,7 @@
 #include"Circle.h"
 
 
-Circle::Circle(Сircumference circle, Color color)
+Circle::Circle(Circumference circle, Color color)
 	:circle{ circle }, color{ color }
 {
 }
@@ -44,9 +44,9 @@ double Circle::get_perimeter()
 
 void Circle::print()
 {
-	cout << "Цвет окружности: ";
+	cout << "circle: ";
 	circle.print();
 	 
-	 //print color для ободка 
-	cout << "Цвет заливки: "; color.print();
+	 //print color пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 
+	cout << "color: "; color.print();
 }

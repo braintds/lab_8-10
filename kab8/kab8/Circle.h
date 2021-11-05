@@ -1,15 +1,15 @@
 #pragma once
 #include "Header.h"
-#include "Ñircumference.h"
+#include "Ð¡ircumference.h"
 
 
 class Circle
 {
 private:
-	Ñircumference circle;
+	Ð¡ircumference circle;
 	Color color;
 public:
-	Circle(Ñircumference, Color);
+	Circle(Ð¡ircumference, Color);
 	void set_color();
 	double get_x();
 	double get_y();

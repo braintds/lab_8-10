@@ -1,16 +1,16 @@
 #pragma once
 #include "Header.h"
-#include "裪rcumference.h"
+#include "小ircumference.h"
 
 
 class Circle
 {
 private:
-	裪rcumference circle;
+	小ircumference circle;
 	Color color;
 public:
-	Circle(裪rcumference, Color);
-	裪rcumference get_circumference();
+	Circle(小ircumference, Color);
+	小ircumference get_circumference();
 	Color get_color();
 	float get_x();
 	float get_y();

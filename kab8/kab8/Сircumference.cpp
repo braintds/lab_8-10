@@ -1,4 +1,4 @@
-#include "Ñircumference.h"
+#include "Circumference.h"
 
 
 Ñircumference::Ñircumference(Point _centre, Color _col, float _rad)
@@ -24,14 +24,12 @@ float Ñircumference::get_rad()
 	return this->rad;
 }
 
-
-void Ñircumference::set_color()
+void Circumference::set_color()
 {
 	color.change_param();
 }
 
-
-Color Ñircumference::get_color()
+Color Circumference::get_color()
 {
 	return color;
 }

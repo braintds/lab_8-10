@@ -11,17 +11,17 @@ void Quadrilateral::change_col()
 {
 	for (unsigned short int i{ 0 }; i < a.size(); i++)
 	{
-		cout << "----------ïðÿìàÿ " << i + 1 << "----------" << endl;
+		cout << "----------Ð¿Ñ€ÑÐ¼Ð°Ñ " << i + 1 << "----------" << endl;
 		a[i].set_color();
 	}
 }
 
 void Quadrilateral::print()
 {
-	cout << "==÷åòûðåõóãîëüíèê==" << endl;
+	cout << "==Ñ‡ÐµÑ‚Ñ‹Ñ€ÐµÑ…ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº==" << endl;
 	for (unsigned short int i{ 0 }; i < a.size(); i++) 
 	{
-		cout << "----------ïðÿìàÿ " << i + 1 << "----------" << endl; a[i].print();
+		cout << "----------Ð¿Ñ€ÑÐ¼Ð°Ñ " << i + 1 << "----------" << endl; a[i].print();
 	}
 }
 

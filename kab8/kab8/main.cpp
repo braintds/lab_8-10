@@ -1,4 +1,4 @@
-#include "main.h"
+ï»¿#include "main.h"
 
 
 void Color_print( Color color) 
@@ -21,7 +21,7 @@ void Quadrilateral_print( vector <LineSegment> array)
 }
 
 
-void Ñircumference_print( Ñircumference circumference)
+void ï¿½ircumference_print( ï¿½ircumference circumference)
 {
 	cout << "Centre: (" << circumference.get_x() << ":" << circumference.get_y() << endl;
 	cout << "Radius: " << circumference.get_rad() << endl;
@@ -33,7 +33,7 @@ void Circle_print(Circle circle)
 {
 	cout << "===Circle==="<<endl;
 	cout << "Circumference" << endl;
-	Ñircumference_print(circle.get_circumference());
+	ï¿½ircumference_print(circle.get_circumference());
 	cout << "fill color" << endl;
 	Color_print(circle.get_color());
 }
@@ -47,7 +47,7 @@ int main()
 	Color s(235, 235, 235, 265);
 	//cout << endl << s.print() << endl<<endl;
 	;
-	Ñircumference cir(c, s, 4);
+	Ð¡ircumference cir(c, s, 4);
 	Circle circle(cir, s);
 
 	LineSegment aa(a, b, s), ab(b,c,s), ac(c,d,s),ad(d,a,s);

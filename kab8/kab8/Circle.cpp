@@ -1,13 +1,13 @@
 #include"Circle.h"
 
 
-Circle::Circle(Ñircumference circle, Color color)
+Circle::Circle(Circumference circle, Color color)
 	:circle{ circle }, color{ color }
 {
 }
 
 
-Ñircumference Circle::get_circumference() 
+Ð¡ircumference Circle::get_circumference() 
 {
 	return circle;
 }

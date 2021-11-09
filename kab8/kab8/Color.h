@@ -5,15 +5,14 @@
 
 class Color {
 private:
-	unsigned char red, green, blue, transparency;
+	int red, green, blue, transparency;
 
 public:
-	Color(unsigned char, unsigned char, unsigned char, unsigned char);
-	char get_red();
-	char get_blue();
-	char get_green();
-	char get_transparency();
-	char print();
+	Color(int, int, int, int);
+	int get_red();
+	int get_blue();
+	int get_green();
+	int get_transparency();
 	bool is_color();
 	void change_param();
 };

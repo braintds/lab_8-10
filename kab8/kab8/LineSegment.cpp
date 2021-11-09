@@ -7,25 +7,26 @@ LineSegment::LineSegment(Point a, Point b, Color color)
 }
 
 
-void LineSegment::set_color()
+Point LineSegment::get_PointA()
 {
-	color.change_param();
+	return a;
 }
 
 
-double LineSegment::get_length() {
+Point LineSegment::get_PointB()
+{
+	return b;
+}
+
+
+float LineSegment::get_length() {
 	
-	double length = sqrt(pow(b.x - a.x, 2.0) + pow(b.y - a.y, 2.0));
+	float length = sqrt(pow(b.x - a.x, 2.0) + pow(b.y - a.y, 2.0));
 	return length;
 }
 
 
-void LineSegment::print()
+Color LineSegment::get_color() 
 {
-	cout << "A" << endl;
-	this->a.print();
-	cout << "B" << endl;
-	this->b.print();
-	cout << "Цвет: ";
-	color.print();
+	return color;
 }

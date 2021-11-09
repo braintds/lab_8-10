@@ -1,12 +1,12 @@
 #include"Point.h"
 
 
-Point::Point(double x = 0, double y = 0)
+Point::Point(float x = 0, float y = 0)
 	:x{ x }, y{ y }
 {
 }
 
-double Point::print()
+float Point::print()
 {
 	return (x + ' ' + y);
 }

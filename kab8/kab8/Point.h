@@ -4,10 +4,7 @@
 
 struct Point
 {
-	double x, y;
-
-	Point(double, double);
-
-	double print();
-
+	float x, y;
+	Point(float, float);
+	float print();
 };

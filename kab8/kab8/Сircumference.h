@@ -9,13 +9,13 @@ class Ñircumference
 private:
 	Point centre;
 	Color color;
-	double rad;
+	float rad;
 public:
-	Ñircumference(Point, Color, double);
-	double get_x();
-	double get_y();
-	double get_rad();
+	Ñircumference(Point, Color, float);
+	float get_x();
+	float get_y();
+	float get_rad();
 	void set_color();
 	Color get_color();
-	void print();
+
 };

@@ -10,12 +10,11 @@ private:
 	Color color;
 public:
 	Circle(Ñircumference, Color);
-	void set_color();
-	double get_x();
-	double get_y();
-	double get_rad();
-	double get_square();
-	double get_perimeter();
-	void print();
-
+	Ñircumference get_circumference();
+	Color get_color();
+	float get_x();
+	float get_y();
+	float get_rad();
+	float get_square();
+	float get_perimeter();
 };

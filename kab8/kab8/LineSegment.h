@@ -10,8 +10,8 @@ private:
 	Point a, b;
 public:
 	LineSegment(Point, Point, Color);
-
-	void set_color();
-	double get_length();
-	void print();
+	Point get_PointA();
+	Point get_PointB();
+	float get_length();
+	Color get_color();
 };

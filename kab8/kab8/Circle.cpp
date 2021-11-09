@@ -7,46 +7,42 @@ Circle::Circle(Ñircumference circle, Color color)
 }
 
 
-void Circle::set_color()
+Ñircumference Circle::get_circumference() 
 {
-	color.change_param();
+	return circle;
 }
 
-double Circle::get_x()
+
+Color Circle::get_color()
+{
+	return color;
+}
+
+float Circle::get_x()
 {
 	return circle.get_x();
 }
 
 
-double Circle::get_y()
+float Circle::get_y()
 {
 	return circle.get_y();
 }
 
 
-double Circle::get_rad()
+float Circle::get_rad()
 {
 	return this->circle.get_rad();
 }
 
 
-double Circle::get_square()
+float Circle::get_square()
 {
 	return M_PI * pow(this->circle.get_rad(), 2);
 }
 
 
-double Circle::get_perimeter()
+float Circle::get_perimeter()
 {
 	return 2 * M_PI * this->circle.get_rad();
-}
-
-
-void Circle::print()
-{
-	cout << "Öâåò îêðóæíîñòè: ";
-	circle.print();
-	 
-	 //print color äëÿ îáîäêà 
-	cout << "Öâåò çàëèâêè: "; color.print();
 }

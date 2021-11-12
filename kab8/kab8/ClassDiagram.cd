@@ -28,11 +28,11 @@
       <FileName>LineSegment.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Сircumference">
+  <Class Name="Circumference">
     <Position X="4.5" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAQAAAI4AAAAAAAAAAAAAAAAAAhAAACAAAAIAAAAIAA=</HashCode>
-      <FileName>Сircumference.h</FileName>
+      <FileName>Circumference.h</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="Point">

@@ -30,7 +30,7 @@
     <ClInclude Include="LineSegment.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Сircumference.h">
+    <ClInclude Include="Circumference.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
@@ -56,7 +56,7 @@
     <ClCompile Include="LineSegment.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Сircumference.cpp">
+    <ClCompile Include="Circumference.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="Point.cpp">

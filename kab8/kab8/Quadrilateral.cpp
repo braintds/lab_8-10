@@ -1,29 +1,30 @@
 #include "Quadrilateral.h"
 
 
-Quadrilateral::Quadrilateral(vector <LineSegment> _a, Color _col)
-	:a{ _a }
+Quadrilateral::Quadrilateral(vector <LineSegment> a, Color color)
+	:a{ a }, color { color }
 {
 	a.reserve(4);
 }
 
-void Quadrilateral::change_col()
+
+Color Quadrilateral::get_color()
 {
-	for (unsigned short int i{ 0 }; i < a.size(); i++)
-	{
-		cout << "----------прямая " << i + 1 << "----------" << endl;
-		a[i].set_color();
-	}
+	return color;
 }
 
-void Quadrilateral::print()
+
+int Quadrilateral::get_Vector_size()
 {
-	cout << "==четырехугольник==" << endl;
-	for (unsigned short int i{ 0 }; i < a.size(); i++) 
-	{
-		cout << "----------прямая " << i + 1 << "----------" << endl; a[i].print();
-	}
+	return a.size();
 }
+
+
+LineSegment Quadrilateral::get_LineSegment(unsigned int i) const
+{
+	return a[i];
+}
+
 
 float Quadrilateral::get_perimeter() {
 
@@ -35,6 +36,7 @@ float Quadrilateral::get_perimeter() {
 	return perimeter;
 }
 
+
 float Quadrilateral::get_area() {
 
 	float area = 1;
@@ -42,9 +44,7 @@ float Quadrilateral::get_area() {
 
 	for (unsigned short int i{ 0 }; i < a.size(); i++)
 	{
-		area = area * ( half_perimeter - a[i].get_length() );
+		area = area * (half_perimeter - a[i].get_length());
 	}
 	return sqrt(area);
 }
-
-

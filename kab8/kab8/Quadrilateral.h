@@ -7,13 +7,13 @@
 class Quadrilateral
 {
 private:
-	vector <LineSegment> a; 
-
-
+	vector <LineSegment> a;
+	Color color;
 public:
-	Quadrilateral(vector <LineSegment> _a, Color _col);
-	void change_col();
-	void print();
+	Quadrilateral(vector <LineSegment>, Color );
+	Color get_color();
+	int get_Vector_size();
+	LineSegment get_LineSegment(unsigned int i) const;
 	float get_perimeter();
 	float get_area();
 };

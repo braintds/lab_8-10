@@ -146,7 +146,7 @@
     <ClInclude Include="Point.h" />
     <ClInclude Include="Quadrilateral.h" />
     <ClInclude Include="LineSegment.h" />
-    <ClInclude Include="Сircumference.h" />
+    <ClInclude Include="Circumference.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
@@ -155,7 +155,7 @@
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Quadrilateral.cpp" />
     <ClCompile Include="LineSegment.cpp" />
-    <ClCompile Include="Сircumference.cpp" />
+    <ClCompile Include="Circumference.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

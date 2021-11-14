@@ -2,15 +2,9 @@
 
 
 Quadrilateral::Quadrilateral(vector <LineSegment> a, Color color)
-	:a{ a }, color { color }
+	:a{a}, Color(color)
 {
-	a.reserve(4);
-}
-
-
-Color Quadrilateral::get_color()
-{
-	return color;
+	this->a.reserve(4);
 }
 
 

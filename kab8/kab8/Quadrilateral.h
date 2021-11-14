@@ -4,14 +4,12 @@
 #include "Header.h"
 
 
-class Quadrilateral
+class Quadrilateral : virtual public Color 
 {
 private:
 	vector <LineSegment> a;
-	Color color;
 public:
 	Quadrilateral(vector <LineSegment>, Color );
-	Color get_color();
 	int get_Vector_size();
 	LineSegment get_LineSegment(unsigned int i) const;
 	float get_perimeter();

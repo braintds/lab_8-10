@@ -6,5 +6,6 @@ struct Point
 {
 	float x, y;
 	Point(float, float);
-	float print();
+	float get_x();
+	float get_y();
 };

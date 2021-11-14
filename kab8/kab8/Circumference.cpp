@@ -2,20 +2,8 @@
 
 
 Circumference::Circumference(Point centre, Color color, float radius)
-	: centre{ centre }, color{ color }, radius { radius }
+	: centre{ centre }, Color(color), radius{radius}
 {
-}
-
-
-float Circumference::get_x()
-{
-	return centre.x;
-}
-
-
-float  Circumference::get_y()
-{
-	return centre.y;
 }
 
 
@@ -25,7 +13,13 @@ float Circumference::get_radius()
 }
 
 
-Color Circumference::get_color()
+float Circumference::get_square()
 {
-	return color;
+	return M_PI * pow(get_radius(), 2);
+}
+
+
+float Circumference::get_perimeter()
+{
+	return 2 * M_PI * get_radius();
 }

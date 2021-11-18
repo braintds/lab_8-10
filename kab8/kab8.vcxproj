@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Colour.h" />
+    <ClInclude Include="Figure.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Point.h" />
@@ -152,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Colour.cpp" />
+    <ClCompile Include="Figure.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Quadrilateral.cpp" />

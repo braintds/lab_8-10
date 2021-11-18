@@ -2,7 +2,7 @@
 
 
 Circumference::Circumference(Point centre, Colour colour, float radius)
-	: centre{ centre }, Colour(colour), radius{radius}
+	: centre{ centre }, colour{ colour }, radius{ radius }
 {
 }
 

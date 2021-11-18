@@ -14,4 +14,3 @@ public:
 	virtual float get_perimeter();
 	Colour get_colour();
 };
-

@@ -3,10 +3,10 @@
 #include "Colour.h"
 
 
-class LineSegment : public Colour
+class LineSegment 
 {
 private:
-	//Colour colour;
+	Colour colour;
 	Point a, b;
 public:
 	LineSegment(Point, Point, Colour);

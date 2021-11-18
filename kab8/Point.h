@@ -4,6 +4,6 @@
 
 struct Point
 {
-	float x, y;
-	Point(float, float);
+	double x, y;
+	Point(double, double);
 };

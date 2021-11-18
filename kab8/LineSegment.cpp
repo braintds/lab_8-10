@@ -2,7 +2,7 @@
 #include"Point.h"
 
 LineSegment::LineSegment(Point a, Point b, Colour colour)
-	: a{a}, b{b}, Colour(colour)
+	: a{ a }, b{ b }, colour{ colour }
 {
 }
 

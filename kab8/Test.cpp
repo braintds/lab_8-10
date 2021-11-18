@@ -31,5 +31,5 @@ void test_main() {
 	assert((quad.get_area() > 23) && (quad.get_area() < 24));
 	assert((quad.get_perimeter() > 21) && (quad.get_perimeter() < 22));
 	cout << "Passed" << endl << endl;
-
+	system("cls");
 }

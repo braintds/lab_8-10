@@ -4,9 +4,10 @@
 #include"Point.h"
 
 
-class Circumference : public Colour
+class Circumference
 {
 private:
+	Colour colour;
 	Point centre;
 	float radius;
 public:

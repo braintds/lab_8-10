@@ -1,18 +1,18 @@
 #pragma once
 #include "Header.h"
 #include "Colour.h"
-#include"Point.h"
+#include "Point.h"
+#include "Figure.h"
 
 
-class Circumference
+class Circumference : public Figure
 {
 private:
-	Colour colour;
 	Point centre;
-	float radius;
+	double radius;
 public:
-	Circumference(Point, Colour, float);
-	float get_radius();
-	float get_square();
-	float get_perimeter();
+	Circumference(Point, Colour, double);
+	double get_radius();
+	double get_square();
+	double get_perimeter();
 };

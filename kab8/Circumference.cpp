@@ -1,25 +1,25 @@
 #include "Circumference.h"
 
 
-Circumference::Circumference(Point centre, Colour colour, float radius)
-	: centre{ centre }, colour{ colour }, radius{ radius }
+Circumference::Circumference(Point centre, Colour outer_colour, double radius)
+	:centre{ centre }, Figure(outer_colour), radius{ radius }
 {
 }
 
 
-float Circumference::get_radius()
+double Circumference::get_radius()
 {
 	return radius;
 }
 
 
-float Circumference::get_square()
+double Circumference::get_square()
 {
 	return M_PI * pow(get_radius(), 2);
 }
 
 
-float Circumference::get_perimeter()
+double Circumference::get_perimeter()
 {
 	return 2 * M_PI * get_radius();
 }

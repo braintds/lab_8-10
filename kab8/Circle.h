@@ -1,15 +1,14 @@
 #pragma once
 #include "Header.h"
 #include "Circumference.h"
-
+#include "Colour.h"
 
 class Circle: public Circumference
 {
 private:
-	//Circumference circle;
-	Colour colour;
+	Colour inner_colour;
 public:
-	Circle(Circumference, Colour);
-	Colour get_colour();
-
+	Circle(Point, Colour, double, Colour);
+	Colour get_inner_colour();
+	void set_inner_colour(Colour color);
 };

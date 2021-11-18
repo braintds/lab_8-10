@@ -7,10 +7,11 @@
 class Figure
 {
 private:
-	Colour colour;
+	Colour outer_colour;
 public:
 	Figure(Colour);
-	virtual float get_square();
-	virtual float get_perimeter();
-	Colour get_colour();
+	virtual double get_square() = 0;
+	virtual double get_perimeter() = 0;
+	Colour get_outer_colour();
+	void set_outer_colour(Colour color);
 };

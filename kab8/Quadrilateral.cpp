@@ -2,7 +2,7 @@
 
 
 Quadrilateral::Quadrilateral(vector<LineSegment> a, Colour colour)
-	: a{a}, colour{ colour }
+	:a{a}, inner_colour{ colour }
 {
 	
 }
@@ -41,4 +41,12 @@ float Quadrilateral::get_area()
 		area = area * (half_perimeter - a[i].get_length());
 	}
 	return sqrt(area);
+}
+
+Colour Quadrilateral::get_inner_colour() {
+	return inner_colour;
+}
+
+void Quadrilateral::set_inner_colour(Colour colour) {
+	inner_colour = colour;
 }

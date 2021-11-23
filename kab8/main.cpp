@@ -56,7 +56,7 @@ void LineSegment_print(LineSegment s)
 	;
 }
 
-
+/* WTF
 void print(Circle a)
 {
 	cout<<a.get_square()<<endl;
@@ -64,7 +64,7 @@ void print(Circle a)
 	cout << a.get_red() << " " << a.get_green() << " " << a.get_blue() <<" "<<a.get_transparency() << endl;
 	Color_print(a.get_colour());
 	Color_print(a.get_colour());
-}
+}*/
 
 
 void Quadrilateral_print(Quadrilateral a)
@@ -85,13 +85,13 @@ int main()
 	Colour s(235, 235, 235, 265), s1(100,100,100,100);
 
 	Circumference cir(c, s, 4);
-	Circle circle(cir, s1);
+	Circle circle(c, s, 4, s1);
 
 	LineSegment aa(a, b, s), ab(b, c, s), ac(c, d, s), ad(d, a, s);
-	vector <LineSegment> t{ aa,ab,ac,ad };
-	Quadrilateral quad(t, s1);
+	vector <Point> t{ a, b, c, d };
+	Quadrilateral quad(t, s1, s);
 
-	print(circle);
+	//print(circle); WTF
 	//Quadrilateral_print(quad);
 	//Circle_print(circle);
 

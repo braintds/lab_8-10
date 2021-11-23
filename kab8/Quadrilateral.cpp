@@ -1,8 +1,8 @@
 #include "Quadrilateral.h"
 
 
-Quadrilateral::Quadrilateral(vector<LineSegment> a, Colour colour)
-	:a{a}, inner_colour{ colour }
+Quadrilateral::Quadrilateral(vector<Point> a, Colour outer_colour, Colour inner_colour)
+	:a{a}, Figure(outer_colour), inner_colour{ inner_colour }
 {
 	
 }
@@ -10,35 +10,36 @@ Quadrilateral::Quadrilateral(vector<LineSegment> a, Colour colour)
 
 int Quadrilateral::get_Vector_size()
 {
-	return arr->size();
+	return 0;//arr->size(); WTF
 }
 
 
-LineSegment Quadrilateral::get_LineSegment(unsigned int i) const
+Point Quadrilateral::get_Points(unsigned int i) const
 {
-	return *(arr +i);
+	return Point(0,0);//*(arr +i); WTF
 }
 
 
-float Quadrilateral::get_perimeter() 
+double Quadrilateral::get_perimeter()
 {
-	float perimeter = 0;
-	for (unsigned short int i{ 0 }; i < 4; i++)
+	double perimeter = 0;
+	for (unsigned short int i{ 1 }; i < 5; i++)
 	{
-		perimeter += arr[i]->get_length();
+		perimeter += sqrt(pow(a[i % 4].x - a[(i - 1) % 4].x, 2.0) + pow(a[i % 4].y - a[(i - 1) % 4].y, 2.0));
 	}
 	return perimeter;
 }
 
 
-float Quadrilateral::get_area() 
+double Quadrilateral::get_square()
 {
-	float area = 1;
-	float half_perimeter = get_perimeter() / 2;
+	double half_perimeter = get_perimeter() / 2;
+	double area = 1;
 
-	for (unsigned short int i{ 0 }; i < 4; i++)
+	for (unsigned short int i{ 1 }; i < 5; i++)
 	{
-		area = area * (half_perimeter - a[i].get_length());
+		cout << "made an iteration" << endl;
+		area = area * (half_perimeter - sqrt(pow(a[i % 4].x - a[(i - 1) % 4].x, 2.0) + pow(a[i % 4].y - a[(i - 1) % 4].y, 2.0)));
 	}
 	return sqrt(area);
 }

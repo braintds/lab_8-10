@@ -6,11 +6,11 @@ void test_main() {
 	Colour s(100, 125, 175, 200), s1(100, 100, 100, 100);
 
 	Circumference cir(c, s, 4);
-	Circle circle(cir, s1);
+	Circle circle(c, s, 4, s1);
 
 	LineSegment aa(a, b, s), ab(b, c, s), ac(c, d, s), ad(d, a, s);
-	vector <LineSegment> t{ aa,ab,ac,ad };
-	Quadrilateral quad(t, s1);
+	vector <Point> t{ a, b, c, d };
+	Quadrilateral quad(t, s1, s);
 	
 	cout << "Tests on Colour class" << endl;
 	assert(s.get_red() == 100);
@@ -26,9 +26,10 @@ void test_main() {
 	assert((cir.get_square() > 50) && (cir.get_square() < 51));
 	cout << "Passed" << endl << endl;
 
+
 	cout << "Tests on  Quadrilateral class" << endl;
-	assert(quad.get_Vector_size() == 4);
-	assert((quad.get_area() > 23) && (quad.get_area() < 24));
+	//assert(quad.get_Vector_size() == 4); WTF
+	assert((quad.get_square() > 23) && (quad.get_square() < 24));
 	assert((quad.get_perimeter() > 21) && (quad.get_perimeter() < 22));
 	cout << "Passed" << endl << endl;
 	system("cls");

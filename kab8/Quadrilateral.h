@@ -1,5 +1,4 @@
 #pragma once
-#include "LineSegment.h"
 #include "Point.h"
 #include "Header.h"
 #include "Colour.h"
@@ -13,9 +12,13 @@ private:
 	Colour inner_colour;
 public:
 	Quadrilateral(vector<Point>, Colour, Colour);
-	//Quadrilateral(LineSegment* a, Colour colour());
-	int get_Vector_size();
-	Point get_Points(unsigned int i) const;
+	Quadrilateral();
+	void move(char a, double k);
+	void rotate(unsigned short int arg);
+	void scale(unsigned short int arg);
+	double get_x();
+	double get_y();
+	Point get_Points() const;
 	double get_perimeter();
 	double get_square();
 	Colour get_inner_colour();

@@ -13,7 +13,7 @@ public:
 	int get_blue();
 	int get_green();
 	int get_transparency();
-	
+
 	bool is_colour();
 	void change_param();
 };

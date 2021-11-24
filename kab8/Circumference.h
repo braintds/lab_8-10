@@ -15,4 +15,10 @@ public:
 	double get_radius();
 	double get_square();
 	double get_perimeter();
+	void move(char c, double k);
+	void rotate(unsigned short int arg);
+	void scale(unsigned short int arg);
+	void set_centre(Point c);
+	double get_x();
+	double get_y();
 };

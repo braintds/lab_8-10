@@ -18,16 +18,10 @@
     <ClInclude Include="Circle.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Colour.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Quadrilateral.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="LineSegment.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Circumference.h">
@@ -45,6 +39,12 @@
     <ClInclude Include="Figure.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="LineSegment.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorDocument.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp">
@@ -59,9 +59,6 @@
     <ClCompile Include="Quadrilateral.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="LineSegment.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
     <ClCompile Include="Circumference.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
@@ -72,6 +69,12 @@
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
     <ClCompile Include="Figure.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="LineSegment.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorDocument.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,22 +1,98 @@
 #include "Quadrilateral.h"
 
 
-Quadrilateral::Quadrilateral(vector<Point> a, Colour outer_colour, Colour inner_colour)
-	:a{a}, Figure(outer_colour), inner_colour{ inner_colour }
+Quadrilateral::Quadrilateral(vector<Point> a, Colour outer_colour = Colour(0, 0, 0, 0), Colour inner_colour = Colour(0, 0, 0, 0))
+	:a{ a }, Figure(outer_colour), inner_colour{ inner_colour }
 {
-	
+}
+
+Quadrilateral::Quadrilateral()
+	: a{ a }, Figure(Colour(0, 0, 0, 0)), inner_colour{ Colour(0,0,0,0) }
+{
 }
 
 
-int Quadrilateral::get_Vector_size()
+void Quadrilateral::move(char c, double k)
 {
-	return 0;//arr->size(); WTF
+	switch (c)
+	{
+	case 'x':
+		for (int i{ 0 }; i < 4; i++)
+			a[i].x += k;
+		break;
+	case 'y':
+		for (int i{ 0 }; i < 4; i++)
+			a[i].y += k;
+		break;
+	default:
+		cout << "indefinite argument" << endl;
+		break;
+	}
 }
 
 
-Point Quadrilateral::get_Points(unsigned int i) const
+void Quadrilateral::rotate(unsigned short int arg)
 {
-	return Point(0,0);//*(arr +i); WTF
+	double* tmp = new double;
+	switch (arg)
+	{
+	case 90:
+
+
+		for (int i{ 0 }; i < 4; i++)
+		{
+			*tmp = a[i].x;
+			a[i].x = 0 - a[i].y;
+			a[i].y = *tmp;
+		}
+
+		break;
+	case 180:
+		for (int i{ 0 }; i < 4; i++)
+		{
+			a[i].x = 0 - a[i].x;
+			a[i].y = 0 - a[i].y;
+		}
+		break;
+	case 270:
+		for (int i{ 0 }; i < 4; i++)
+			a[i].y = 0 - a[i].y;
+		break;
+	default:
+		break;
+	}
+	delete tmp;
+	tmp = nullptr;
+}
+
+void Quadrilateral::scale(unsigned short int arg)
+{
+	try
+	{
+		if (arg < 0) throw 0;
+	}
+	catch (int error)
+	{
+		if (error == 0)
+			arg = abs(arg);
+	}
+	//дописать масштабирование
+}
+
+double Quadrilateral::get_x()
+{
+	return 0.0;
+}
+
+double Quadrilateral::get_y()
+{
+	return 0.0;
+}
+
+
+Point Quadrilateral::get_Points() const
+{
+	return Point(0, 0);
 }
 
 
@@ -44,10 +120,14 @@ double Quadrilateral::get_square()
 	return sqrt(area);
 }
 
-Colour Quadrilateral::get_inner_colour() {
+
+Colour Quadrilateral::get_inner_colour()
+{
 	return inner_colour;
 }
 
-void Quadrilateral::set_inner_colour(Colour colour) {
+
+void Quadrilateral::set_inner_colour(Colour colour)
+{
 	inner_colour = colour;
 }

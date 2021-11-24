@@ -8,10 +8,10 @@ void test_main() {
 	Circumference cir(c, s, 4);
 	Circle circle(c, s, 4, s1);
 
-	LineSegment aa(a, b, s), ab(b, c, s), ac(c, d, s), ad(d, a, s);
+	//LineSegment aa(a, b, s), ab(b, c, s), ac(c, d, s), ad(d, a, s);
 	vector <Point> t{ a, b, c, d };
 	Quadrilateral quad(t, s1, s);
-	
+
 	cout << "Tests on Colour class" << endl;
 	assert(s.get_red() == 100);
 	assert(s.get_green() == 125);
@@ -28,7 +28,6 @@ void test_main() {
 
 
 	cout << "Tests on  Quadrilateral class" << endl;
-	//assert(quad.get_Vector_size() == 4); WTF
 	assert((quad.get_square() > 23) && (quad.get_square() < 24));
 	assert((quad.get_perimeter() > 21) && (quad.get_perimeter() < 22));
 	cout << "Passed" << endl << endl;

@@ -7,11 +7,11 @@ Circle::Circle(Point centre = Point(0, 0), Colour outer_colour = Colour(0, 0, 0,
 }
 
 
-Circle::Circle()
+/*Circle::Circle()
 	: inner_colour{ Colour(0, 0, 0, 0) }, Circumference(Point(0, 0), Colour(0, 0, 0, 0), 0)
 {
 
-}
+}*/
 
 
 
@@ -32,7 +32,7 @@ void Circle::move(char c, double k)
 }
 
 
-void Circle::rotate(unsigned short int arg)
+void Circle::rotate(unsigned int arg)
 {
 
 	switch (arg)
@@ -52,7 +52,7 @@ void Circle::rotate(unsigned short int arg)
 
 }
 
-void Circle::scale(unsigned short int arg)
+void Circle::scale(unsigned int arg)
 {
 	;
 }

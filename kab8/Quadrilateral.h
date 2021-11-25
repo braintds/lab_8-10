@@ -12,12 +12,12 @@ private:
 	Colour inner_colour;
 public:
 	Quadrilateral(vector<Point>, Colour, Colour);
-	Quadrilateral();
+	int get_vector_size();
 	void move(char a, double k);
-	void rotate(unsigned short int arg);
-	void scale(unsigned short int arg);
-	double get_x();
-	double get_y();
+	void rotate(unsigned int arg);
+	void scale(unsigned int arg);
+	double get_x(unsigned int i);
+	double get_y(unsigned int i);
 	Point get_Points() const;
 	double get_perimeter();
 	double get_square();

@@ -67,7 +67,7 @@ bool Colour::is_colour()
 
 void Colour::change_param()
 {
-	/*unsigned short int r, g, b, t;
+	/*unsigned int r, g, b, t;
 	while (1)
 	{
 		cout << "введите rgb код:" << endl;

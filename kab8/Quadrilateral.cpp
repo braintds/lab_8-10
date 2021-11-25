@@ -6,9 +6,9 @@ Quadrilateral::Quadrilateral(vector<Point> a, Colour outer_colour = Colour(0, 0,
 {
 }
 
-Quadrilateral::Quadrilateral()
-	: a{ a }, Figure(Colour(0, 0, 0, 0)), inner_colour{ Colour(0,0,0,0) }
+int Quadrilateral::get_vector_size()
 {
+	return a.size();
 }
 
 
@@ -31,7 +31,7 @@ void Quadrilateral::move(char c, double k)
 }
 
 
-void Quadrilateral::rotate(unsigned short int arg)
+void Quadrilateral::rotate(unsigned int arg)
 {
 	double* tmp = new double;
 	switch (arg)
@@ -65,7 +65,7 @@ void Quadrilateral::rotate(unsigned short int arg)
 	tmp = nullptr;
 }
 
-void Quadrilateral::scale(unsigned short int arg)
+void Quadrilateral::scale(unsigned int arg)
 {
 	try
 	{
@@ -74,19 +74,19 @@ void Quadrilateral::scale(unsigned short int arg)
 	catch (int error)
 	{
 		if (error == 0)
-			arg = abs(arg);
+			arg = abs((double)arg); 
 	}
 	//дописать масштабирование
 }
 
-double Quadrilateral::get_x()
+double Quadrilateral::get_x(unsigned int i)
 {
-	return 0.0;
+	return a[i].x;
 }
 
-double Quadrilateral::get_y()
+double Quadrilateral::get_y(unsigned int i)
 {
-	return 0.0;
+	return a[i].y;
 }
 
 
@@ -99,7 +99,7 @@ Point Quadrilateral::get_Points() const
 double Quadrilateral::get_perimeter()
 {
 	double perimeter = 0;
-	for (unsigned short int i{ 1 }; i < 5; i++)
+	for (unsigned int i{ 1 }; i < 5; i++)
 	{
 		perimeter += sqrt(pow(a[i % 4].x - a[(i - 1) % 4].x, 2.0) + pow(a[i % 4].y - a[(i - 1) % 4].y, 2.0));
 	}
@@ -112,7 +112,7 @@ double Quadrilateral::get_square()
 	double half_perimeter = get_perimeter() / 2;
 	double area = 1;
 
-	for (unsigned short int i{ 1 }; i < 5; i++)
+	for (unsigned int i{ 1 }; i < 5; i++)
 	{
 		cout << "made an iteration" << endl;
 		area = area * (half_perimeter - sqrt(pow(a[i % 4].x - a[(i - 1) % 4].x, 2.0) + pow(a[i % 4].y - a[(i - 1) % 4].y, 2.0)));

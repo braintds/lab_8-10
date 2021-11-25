@@ -4,5 +4,6 @@
 #include "Colour.h"
 #include "Circle.h"
 #include "Quadrilateral.h"
+#include "VectorDocument.h"
 
 void test_main();

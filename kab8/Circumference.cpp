@@ -24,9 +24,9 @@ void Circumference::move(char c, double k)
 }
 
 
-void Circumference::rotate(unsigned short int arg)
+void Circumference::rotate(unsigned int arg)
 {
-
+	
 	switch (arg)
 	{
 	case 90:
@@ -36,7 +36,7 @@ void Circumference::rotate(unsigned short int arg)
 		centre = Point(0 - get_x(), 0 - get_y());
 		break;
 	case 270:
-		centre = Point(get_x(), 0 - get_y());
+		centre = Point(get_x(), 0 - get_y());;
 		break;
 	default:
 		break;
@@ -44,7 +44,8 @@ void Circumference::rotate(unsigned short int arg)
 
 }
 
-void Circumference::scale(unsigned short int arg)
+
+void Circumference::scale(unsigned int arg)
 {
 	;
 }
@@ -67,15 +68,18 @@ double Circumference::get_perimeter()
 	return 2 * M_PI * get_radius();
 }
 
+
 void Circumference::set_centre(Point c)
 {
 	centre = c;
 }
 
+
 double Circumference::get_x()
 {
 	return centre.x;
 }
+
 
 double Circumference::get_y()
 {

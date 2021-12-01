@@ -12,13 +12,13 @@ void Circumference::move(char c, double k)
 	switch (c)
 	{
 	case 'x':
-		centre = Point(k + centre.x, get_y());
+		set_centre(Point(k + get_x(), get_y()));
 		break;
 	case 'y':
 		set_centre(Point(get_x(), k + get_y()));
 		break;
 	default:
-		cout << "indefinite argument" << endl;
+		cout << "Incorrect argument. You can choose x or y." << endl;
 		break;
 	}
 }
@@ -26,28 +26,17 @@ void Circumference::move(char c, double k)
 
 void Circumference::rotate(unsigned int arg)
 {
-	
-	switch (arg)
-	{
-	case 90:
-		centre = Point(0 - get_y(), get_x());
-		break;
-	case 180:
-		centre = Point(0 - get_x(), 0 - get_y());
-		break;
-	case 270:
-		centre = Point(get_x(), 0 - get_y());;
-		break;
-	default:
-		break;
-	}
-
+	;
 }
 
 
-void Circumference::scale(unsigned int arg)
+void Circumference::scale(double arg)
 {
-	;
+	if (arg > 0) 
+		radius *= arg;
+	else {
+		cout << "Incorrect argument. Scale coefficent must be greater than 0." << endl;
+	}
 }
 
 

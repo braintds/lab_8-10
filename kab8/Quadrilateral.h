@@ -15,7 +15,7 @@ public:
 	int get_vector_size();
 	void move(char a, double k);
 	void rotate(unsigned int arg);
-	void scale(unsigned int arg);
+	void scale(double arg);
 	double get_x(unsigned int i);
 	double get_y(unsigned int i);
 	Point get_Points() const;

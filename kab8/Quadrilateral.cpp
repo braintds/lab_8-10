@@ -25,7 +25,7 @@ void Quadrilateral::move(char c, double k)
 			a[i].y += k;
 		break;
 	default:
-		cout << "indefinite argument" << endl;
+		cout << "Incorrect argument. You can chose x or y." << endl;
 		break;
 	}
 }
@@ -59,24 +59,25 @@ void Quadrilateral::rotate(unsigned int arg)
 			a[i].y = 0 - a[i].y;
 		break;
 	default:
+		cout << "Incorrect argument. You can rotate only on 90, 180 or 270 degrees" << endl;
 		break;
 	}
 	delete tmp;
 	tmp = nullptr;
 }
 
-void Quadrilateral::scale(unsigned int arg)
+void Quadrilateral::scale(double arg)
 {
-	try
+	double dx, dy;
+
+	for (int i{ 1 }; i < 4; i++)
 	{
-		if (arg < 0) throw 0;
+		dx = a[i].x - a[0].x;
+		dy = a[i].y - a[0].y;
+
+		a[i].x = (a[i].x - dx) * arg + dx;
+		a[i].y = (a[i].y - dy) * arg + dy;
 	}
-	catch (int error)
-	{
-		if (error == 0)
-			arg = abs((double)arg); 
-	}
-	//дописать масштабирование
 }
 
 double Quadrilateral::get_x(unsigned int i)

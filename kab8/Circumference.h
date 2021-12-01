@@ -17,7 +17,7 @@ public:
 	double get_perimeter();
 	void move(char c, double k);
 	void rotate(unsigned int arg);
-	void scale(unsigned int arg);
+	void scale(double arg);
 	void set_centre(Point c);
 	double get_x();
 	double get_y();

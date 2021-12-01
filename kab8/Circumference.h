@@ -24,6 +24,7 @@ public:
 	void rotate(unsigned int arg);
 	void scale(double arg);
 	void set_centre(Point c);
+	void set_radius(double r);
 
 	Document toJSON() override;
 	bool fromJSON(const Value& value) override;

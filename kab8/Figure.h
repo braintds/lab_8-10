@@ -2,6 +2,7 @@
 #include "Header.h"
 #include "Colour.h"
 #include"Point.h"
+#include "Serialize.h"
 
 
 class Figure
@@ -14,7 +15,7 @@ public:
 	virtual double get_perimeter() = 0;
 	virtual void move(char a, double k) = 0;
 	virtual void rotate(unsigned int arg) = 0;
-	virtual void scale(unsigned int arg) = 0;
+	virtual void scale(double arg) = 0;
 	Colour get_outer_colour();
 	void set_outer_colour(Colour color);
 };

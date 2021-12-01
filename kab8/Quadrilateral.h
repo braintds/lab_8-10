@@ -5,7 +5,7 @@
 #include "Figure.h"
 
 
-class Quadrilateral : public Figure
+class Quadrilateral : public Figure, public Serializable
 {
 private:
 	vector <Point> a;
@@ -23,4 +23,7 @@ public:
 	double get_square();
 	Colour get_inner_colour();
 	void set_inner_colour(Colour color);
+
+	Document toJSON() override;
+	bool fromJSON(const Value& value) override;
 };

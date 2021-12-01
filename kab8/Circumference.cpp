@@ -74,3 +74,104 @@ double Circumference::get_y()
 {
 	return centre.y;
 }
+
+Point Circumference::get_centre()
+{
+	return centre;
+}
+ 
+void Circumference::set_radius(double r)
+{
+	this->radius = r;
+}
+
+//Serialization
+Document Circumference::toJSON() {
+
+	Document document;
+	Document::AllocatorType allocator = document.GetAllocator();
+
+	document.SetObject();
+
+	Value documentType;
+	documentType.SetString("Circumference", 13, allocator);
+	document.AddMember("type", documentType, allocator);
+
+	Value documentCentreX;
+	documentCentreX.SetDouble(this->centre.x);
+	document.AddMember("centre_x", documentCentreX, allocator);
+
+	Value documentCentreY;
+	documentCentreY.SetDouble(this->centre.y);
+	document.AddMember("centre_y", documentCentreY, allocator);
+
+	Value documentRadius;
+	documentRadius.SetDouble(this->radius);
+	document.AddMember("radius", documentRadius, allocator);
+
+	Value documentOuterRed;
+	documentOuterRed.SetInt(get_outer_colour().get_red());
+	document.AddMember("outer_red", documentOuterRed, allocator);
+
+	Value documentOuterGreen;
+	documentOuterGreen.SetInt(get_outer_colour().get_green());
+	document.AddMember("outer_green", documentOuterGreen, allocator);
+
+	Value documentOuterBlue;
+	documentOuterBlue.SetInt(get_outer_colour().get_blue());
+	document.AddMember("outer_blue", documentOuterBlue, allocator);
+
+	Value documentOuterTransparency;
+	documentOuterTransparency.SetInt(get_outer_colour().get_transparency());
+	document.AddMember("outer_transparency", documentOuterTransparency, allocator);
+
+	return document;
+}
+
+//Deserialization
+bool Circumference::fromJSON(const Value& value) {
+
+	if (!value.IsObject())
+		return false;
+
+	if (!value.HasMember("type"))
+		return false;
+
+	if (std::string(value["type"].GetString()) != std::string("Circumference"))
+		return false;
+
+	double _centre_x, _centre_y, _radius;
+	int _outer_red, _outer_green, _outer_blue, _outer_transparency;
+
+	if (!value.HasMember("centre_x"))
+		return false;
+	else _centre_x = value["centre_x"].GetDouble();
+
+	if (!value.HasMember("centre_y"))
+		return false;
+	else _centre_y = value["centre_y"].GetDouble();
+
+	if (!value.HasMember("radius"))
+		return false;
+	else _radius = value["radius"].GetDouble();
+
+	if (!value.HasMember("outer_red"))
+		return false;
+	else _outer_red = value["outer_red"].GetInt();
+
+	if (!value.HasMember("outer_green"))
+		return false;
+	else _outer_green = value["outer_green"].GetInt();
+
+	if (!value.HasMember("outer_blue"))
+		return false;
+	else _outer_blue = value["outer_blue"].GetInt();
+
+	if (!value.HasMember("outer_transparency"))
+		return false;
+	else _outer_transparency = value["outer_transparency"].GetInt();
+
+	this->set_outer_colour(Colour(_outer_red, _outer_green, _outer_blue, _outer_transparency));
+	this->set_centre(Point(_centre_x, _centre_y));
+	this->radius = _radius;
+}

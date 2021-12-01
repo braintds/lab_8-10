@@ -1,9 +1,8 @@
 #pragma once
-#include"Point.h"
 #include "Header.h"
+#include "Serialize.h"
 
-
-class Colour {
+class Colour : public Serializable {
 private:
 	int red, green, blue, transparency;
 
@@ -16,4 +15,7 @@ public:
 
 	bool is_colour();
 	void change_param();
+
+	Document toJSON() override;
+	bool fromJSON(const Value& value) override;
 };

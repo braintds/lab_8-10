@@ -12,4 +12,7 @@ public:
 	//Circle();
 	Colour get_inner_colour();
 	void set_inner_colour(Colour color);
+
+	Document toJSON() override;
+	bool fromJSON(const Value& value) override;
 };

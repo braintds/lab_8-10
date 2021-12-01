@@ -89,3 +89,75 @@ void Colour::change_param()
 			cout << "Красный оттенок задан неверно!" << endl;
 	}*/
 }
+
+
+//Serialization
+Document Colour::toJSON() {
+
+	Document document;
+	Document::AllocatorType allocator = document.GetAllocator();
+
+	document.SetObject();
+
+	Value documentType;
+	documentType.SetString("Colour", 6, allocator);
+	document.AddMember("type", documentType, allocator);
+
+	Value documentRed;
+	documentRed.SetInt(this->red);
+	document.AddMember("red", documentRed, allocator);
+
+	Value documentGreen;
+	documentGreen.SetInt(this->green);
+	document.AddMember("green", documentGreen, allocator);
+
+	Value documentBlue;
+	documentBlue.SetInt(this->blue);
+	document.AddMember("blue", documentBlue, allocator);
+
+	Value documentTransparency;
+	documentTransparency.SetInt(this->transparency);
+	document.AddMember("transparency", documentTransparency, allocator);
+
+	return document;
+}
+
+//Deserialization
+bool Colour::fromJSON(const Value& value) {
+
+	if (!value.IsObject())
+		return false;
+
+	if (!value.HasMember("type"))
+		return false;
+
+	if (std::string(value["type"].GetString()) != std::string("Colour"))
+		return false;
+
+	int _red;
+	int _green;
+	int _blue;
+	int _transparency;
+
+	if (!value.HasMember("red"))
+		return false;
+	else _red = value["red"].GetInt();
+
+	if (!value.HasMember("green"))
+		return false;
+	else _green = value["green"].GetInt();
+
+	if (!value.HasMember("blue"))
+		return false;
+	else _blue = value["blue"].GetInt();
+
+	if (!value.HasMember("transparency"))
+		return false;
+	else _transparency = value["transparency"].GetInt();
+
+
+	this->red = _red;
+	this->green = _green;
+	this->blue = _blue;
+	this->transparency = _transparency;
+}

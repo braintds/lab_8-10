@@ -91,6 +91,12 @@ double Quadrilateral::get_y(unsigned int i)
 }
 
 
+vector <Point> Quadrilateral::get_Points() const
+{
+	return a;
+}
+
+
 double Quadrilateral::get_perimeter()
 {
 	double perimeter = 0;
@@ -109,7 +115,6 @@ double Quadrilateral::get_square()
 
 	for (unsigned int i{ 1 }; i < 5; i++)
 	{
-		cout << "made an iteration" << endl;
 		area = area * (half_perimeter - sqrt(pow(a[i % 4].x - a[(i - 1) % 4].x, 2.0) + pow(a[i % 4].y - a[(i - 1) % 4].y, 2.0)));
 	}
 	return sqrt(area);

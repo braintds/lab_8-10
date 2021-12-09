@@ -142,11 +142,11 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Colour.h" />
     <ClInclude Include="Figure.h" />
-    <ClInclude Include="LineSegment.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Quadrilateral.h" />
     <ClInclude Include="Circumference.h" />
+    <ClInclude Include="Serialize.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="VectorDocument.h" />
   </ItemGroup>
@@ -154,7 +154,6 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Colour.cpp" />
     <ClCompile Include="Figure.cpp" />
-    <ClCompile Include="LineSegment.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Quadrilateral.cpp" />
@@ -164,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

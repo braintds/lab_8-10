@@ -7,3 +7,4 @@
 #include "VectorDocument.h"
 
 void test_main();
+string toStringJSON(const Document& d);

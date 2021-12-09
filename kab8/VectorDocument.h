@@ -6,7 +6,7 @@
 #include "Quadrilateral.h"
 
 
-class VectorDocument
+class VectorDocument : public Serializable
 {
 private:
 	vector <Circle> circles;
@@ -25,4 +25,7 @@ public:
 	Quadrilateral get_Quadrilateral(unsigned int i);
 	Circle get_Circle(unsigned int i);
 	Circumference get_Circumference(unsigned int i);
+
+	Document toJSON() override;
+	bool fromJSON(const Value& value) override;
 };

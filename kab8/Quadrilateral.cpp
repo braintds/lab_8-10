@@ -91,12 +91,6 @@ double Quadrilateral::get_y(unsigned int i)
 }
 
 
-Point Quadrilateral::get_Points() const
-{
-	return Point(0, 0);
-}
-
-
 double Quadrilateral::get_perimeter()
 {
 	double perimeter = 0;

@@ -43,7 +43,7 @@ Document Circle::toJSON() {
 	document.AddMember("centre_y", documentCentreY, allocator);
 
 	Value documentRadius;
-	documentRadius.SetDouble(this->get_radius();
+	documentRadius.SetDouble(this->get_radius());
 	document.AddMember("radius", documentRadius, allocator);
 
 	Value documentOuterRed;

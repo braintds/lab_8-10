@@ -18,7 +18,6 @@ public:
 	void scale(double arg);
 	double get_x(unsigned int i);
 	double get_y(unsigned int i);
-	Point get_Points() const;
 	double get_perimeter();
 	double get_square();
 	Colour get_inner_colour();

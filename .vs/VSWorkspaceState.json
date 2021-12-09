@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\kab8"
+    "\\kab8",
+    "\\rapidjson"
   ],
-  "SelectedNode": "\\kab8\\Circle.cpp",
+  "SelectedNode": "\\kab8\\Test.cpp",
   "PreviewInSolutionExplorer": false
 }

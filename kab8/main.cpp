@@ -1,4 +1,5 @@
-﻿#include "main.h"
+﻿#include "Test.h"
+
 
 void Color_print(Colour colour)
 {

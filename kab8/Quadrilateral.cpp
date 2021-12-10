@@ -6,6 +6,7 @@ Quadrilateral::Quadrilateral(vector<Point> a, Colour outer_colour = Colour(0, 0,
 {
 }
 
+
 int Quadrilateral::get_vector_size()
 {
 	return a.size();
@@ -66,6 +67,7 @@ void Quadrilateral::rotate(unsigned int arg)
 	tmp = nullptr;
 }
 
+
 void Quadrilateral::scale(double arg)
 {
 	double dx, dy;
@@ -80,10 +82,12 @@ void Quadrilateral::scale(double arg)
 	}
 }
 
+
 double Quadrilateral::get_x(unsigned int i)
 {
 	return a[i].x;
 }
+
 
 double Quadrilateral::get_y(unsigned int i)
 {

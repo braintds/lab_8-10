@@ -1,12 +1,14 @@
 #include <assert.h>
 #include "Test.h"
 
+
 string toStringJSON(const Document& d) {
 	StringBuffer buffer;
 	Writer<StringBuffer> writer(buffer);
 	d.Accept(writer);
 	return buffer.GetString();
 }
+
 
 void test_main() {
 	Point a(1, 2), b(3, 4), c(1, -3), d(-2, 4), e(-3, -4);
@@ -77,10 +79,10 @@ void test_main() {
 	assert((VectorDoc.get_Circumference(0).get_square() > 50) && (VectorDoc.get_Circumference(0).get_square() > 51));
 	VectorDoc.get_Circumference(0).move('x', 2);
 	VectorDoc.get_Circumference(0).move('y', 4);
-	assert((VectorDoc.get_Circumference(0).get_x() == 3) && (VectorDoc.get_Circumference(0).get_y() == 1);
+	assert((VectorDoc.get_Circumference(0).get_x() == 3) && (VectorDoc.get_Circumference(0).get_y() == 1));
 	VectorDoc.get_Circumference(0).scale(2);
 	assert(VectorDoc.get_Circumference(0).get_radius() == 8);
 
 
-	//system("cls");
+	system("cls");
 }

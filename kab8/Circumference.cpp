@@ -75,11 +75,13 @@ double Circumference::get_y()
 	return centre.y;
 }
 
+
 Point Circumference::get_centre()
 {
 	return centre;
 }
  
+
 void Circumference::set_radius(double r)
 {
 	this->radius = r;

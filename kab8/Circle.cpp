@@ -7,18 +7,14 @@ Circle::Circle(Point centre = Point(0, 0), Colour outer_colour = Colour(0, 0, 0,
 }
 
 
-/*Circle::Circle()
-	: inner_colour{ Colour(0, 0, 0, 0) }, Circumference(Point(0, 0), Colour(0, 0, 0, 0), 0)
+Colour Circle::get_inner_colour()
 {
-
-}*/
-
-
-Colour Circle::get_inner_colour() {
 	return inner_colour;
 }
 
-void Circle::set_inner_colour(Colour colour) {
+
+void Circle::set_inner_colour(Colour colour)
+{
 	inner_colour = colour;
 }
 

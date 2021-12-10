@@ -37,22 +37,26 @@ Colour::Colour(int red = 0, int green = 0, int blue = 0, int transparency = 0)
 }
 
 
-int Colour::get_red() {
+int Colour::get_red()
+{
 	return red;
 }
 
 
-int Colour::get_green() {
+int Colour::get_green()
+{
 	return green;
 }
 
 
-int Colour::get_blue() {
+int Colour::get_blue()
+{
 	return blue;
 }
 
 
-int Colour::get_transparency() {
+int Colour::get_transparency()
+{
 	return transparency;
 }
 
@@ -63,31 +67,6 @@ bool Colour::is_colour()
 		|| (blue >= 0 && blue < 256) || (transparency >= 0 && transparency < 256))
 		return true;
 	return false;
-}
-
-void Colour::change_param()
-{
-	/*unsigned int r, g, b, t;
-	while (1)
-	{
-		cout << "введите rgb код:" << endl;
-		cin >> r >> g >> b >> t;
-		if (r <= 255)
-			if (g <= 255)
-				if (b <= 255)
-					if (t <= 255)
-					{
-						this->red = r; this->green = g; this->blue = b; this->transparency = t; break;
-					}
-					else
-						cout << "Прозрачность задана неверно!" << endl;
-				else
-					cout << "Синий оттенок задан неверно!" << endl;
-			else
-				cout << "Зеленый оттенок задан неверно!" << endl;
-		else
-			cout << "Красный оттенок задан неверно!" << endl;
-	}*/
 }
 
 

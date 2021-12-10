@@ -9,7 +9,6 @@ private:
 	Colour inner_colour;
 public:
 	Circle(Point, Colour, double, Colour);
-	//Circle();
 	Colour get_inner_colour();
 	void set_inner_colour(Colour color);
 

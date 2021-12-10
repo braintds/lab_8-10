@@ -4,7 +4,6 @@
 VectorDocument::VectorDocument(vector <Quadrilateral> quadrilaterals, vector <Circle> circles, vector <Circumference> circumferences)
 	: quadrilaterals{ quadrilaterals }, circles{ circles }, circumferences{ circumferences }
 {
-
 }
 
 

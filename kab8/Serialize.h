@@ -8,7 +8,9 @@
 
 using namespace rapidjson;
 
-class Serializable {
+
+class Serializable
+{
 
 public:
 

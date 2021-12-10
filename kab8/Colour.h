@@ -14,7 +14,6 @@ public:
 	int get_transparency();
 
 	bool is_colour();
-	void change_param();
 
 	Document toJSON() override;
 	bool fromJSON(const Value& value) override;

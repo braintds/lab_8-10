@@ -1,11 +1,11 @@
 #include <assert.h>
 #include "Test.h"
 
-string toStringJSON(const Document& d) { 
-	StringBuffer buffer; 
-	Writer<StringBuffer> writer(buffer); 
-	d.Accept(writer); 
-	return buffer.GetString(); 
+string toStringJSON(const Document& d) {
+	StringBuffer buffer;
+	Writer<StringBuffer> writer(buffer);
+	d.Accept(writer);
+	return buffer.GetString();
 }
 
 void test_main() {
@@ -59,6 +59,28 @@ void test_main() {
 	assert(toStringJSON(quad.toJSON()) == "{\"type\":\"Quadrilateral\",\"x1\":-6.0,\"y1\":4.0,\"x2\":-14.0,\"y2\":10.0,\"x3\":-7.0,\"y3\":8.0,\"x4\":-14.0,\"y4\":5.0,\"outer_red\":100,\"outer_green\":100,\"outer_blue\":100,\"outer_transparency\":100,\"inner_red\":100,\"inner_green\":125,\"inner_blue\":175,\"inner_transparency\":200}");
 
 	cout << "Passed" << endl << endl;
+
+	cout << "Tests on  VectorDocument class" << endl;
+	assert((VectorDoc.get_Quadrilateral(0).get_square() > 23) && (VectorDoc.get_Quadrilateral(0).get_square() < 24));
+	assert((VectorDoc.get_Quadrilateral(0).get_perimeter() > 21) && (VectorDoc.get_Quadrilateral(0).get_perimeter() < 22));
+	VectorDoc.get_Quadrilateral(0).move('x', 3);
+	VectorDoc.get_Quadrilateral(0).move('y', 4);
+	assert((VectorDoc.get_Quadrilateral(0).get_Points()[0].x == 4) && (VectorDoc.get_Quadrilateral(0).get_Points()[0].y == 6));
+	VectorDoc.get_Quadrilateral(0).scale(2);
+	assert((VectorDoc.get_Quadrilateral(0).get_Points()[1].x == 10) && (VectorDoc.get_Quadrilateral(0).get_Points()[1].y == 14));
+	VectorDoc.get_Quadrilateral(0).rotate(90);
+	assert((VectorDoc.get_Quadrilateral(0).get_Points()[1].x == -14) && (VectorDoc.get_Quadrilateral(0).get_Points()[1].y == 10));
+
+
+	assert(VectorDoc.get_Circumference(0).get_radius() == 4);
+	assert((VectorDoc.get_Circumference(0).get_perimeter() > 25) && (VectorDoc.get_Circumference(0).get_perimeter() > 26));
+	assert((VectorDoc.get_Circumference(0).get_square() > 50) && (VectorDoc.get_Circumference(0).get_square() > 51));
+	VectorDoc.get_Circumference(0).move('x', 2);
+	VectorDoc.get_Circumference(0).move('y', 4);
+	assert((VectorDoc.get_Circumference(0).get_x() == 3) && (VectorDoc.get_Circumference(0).get_y() == 1);
+	VectorDoc.get_Circumference(0).scale(2);
+	assert(VectorDoc.get_Circumference(0).get_radius() == 8);
+
+
 	//system("cls");
 }
-

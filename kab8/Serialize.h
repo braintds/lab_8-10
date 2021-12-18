@@ -13,9 +13,6 @@ class Serializable
 {
 
 public:
-
-	Serializable() {};
-
 	//Serialization by default
 	virtual Document toJSON() = 0;
 

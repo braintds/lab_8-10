@@ -41,15 +41,15 @@ void VectorDocument_print(VectorDocument VectorDoc)
 {
 	cout << "===Circles===" << endl;
 	for (unsigned int i{ 0 }; i < VectorDoc.get_Circle_vector_size(); i++)
-		Circle_print(VectorDoc.get_Circle(i));
+		Circle_print(*VectorDoc.get_Circle(i));
 
 	cout << "===Quadrilaterals===" << endl;
 	for (unsigned int i{ 0 }; i < VectorDoc.get_Quadrilateral_vector_size(); i++)
-		Quadrilateral_print(VectorDoc.get_Quadrilateral(i));
+		Quadrilateral_print(*VectorDoc.get_Quadrilateral(i));
 
 	cout << "===Circumferences===" << endl;
 	for (unsigned int i{ 0 }; i < VectorDoc.get_Circumference_vector_size(); i++)
-		Circumference_print(VectorDoc.get_Circumference(i));
+		Circumference_print(*VectorDoc.get_Circumference(i));
 }
 
 

@@ -70,21 +70,21 @@ int VectorDocument::get_Circumference_vector_size()
 }
 
 
-Quadrilateral VectorDocument::get_Quadrilateral(unsigned int i)
+Quadrilateral* VectorDocument::get_Quadrilateral(unsigned int i)
 {
-	return quadrilaterals[i];
+	return &quadrilaterals[i];
 }
 
 
-Circle VectorDocument::get_Circle(unsigned int i)
+Circle* VectorDocument::get_Circle(unsigned int i)
 {
-	return circles[i];
+	return &circles[i];
 }
 
 
-Circumference VectorDocument::get_Circumference(unsigned int i)
+Circumference* VectorDocument::get_Circumference(unsigned int i)
 {
-	return circumferences[i];
+	return &circumferences[i];
 }
 
 //Serialization

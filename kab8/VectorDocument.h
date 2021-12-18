@@ -22,9 +22,9 @@ public:
 	int get_Quadrilateral_vector_size();
 	int get_Circle_vector_size();
 	int get_Circumference_vector_size();
-	Quadrilateral get_Quadrilateral(unsigned int i);
-	Circle get_Circle(unsigned int i);
-	Circumference get_Circumference(unsigned int i);
+	Quadrilateral* get_Quadrilateral(unsigned int i);
+	Circle* get_Circle(unsigned int i);
+	Circumference* get_Circumference(unsigned int i);
 
 	Document toJSON() override;
 	bool fromJSON(const Value& value) override;
